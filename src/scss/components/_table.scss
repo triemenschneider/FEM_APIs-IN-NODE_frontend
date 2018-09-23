@@ -1,0 +1,118 @@
+.table {
+  min-width: 900px;
+  margin-bottom: 60px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  .thead {
+    margin-bottom: 15px;
+    .tr {
+      border-bottom: 1px dotted #e1e1e1;
+      display: flex;
+      .th {
+        &.name {
+          width: 35%;
+        }
+        &.id {
+          width: 10%;
+        }
+        &.date {
+          width: 20%;
+        }
+        &.age {
+          width: 10%;
+        }
+        &.gender {
+          width: 15%;
+        }
+        padding-bottom: 15px;
+        text-align-last: left;
+        font-size: 16px;
+        font-weight: bold;
+        color: #9b9b9b;
+      }
+    }
+  }
+  .tbody {
+    .tr,
+    .tr_add,
+    .tr_edit {
+      padding: 5px 0;
+      display: flex;
+      .td {
+        &.name {
+          width: 35%;
+        }
+        &.id {
+          width: 10%;
+        }
+        &.date {
+          width: 20%;
+        }
+        &.age {
+          width: 10%;
+        }
+        &.gender {
+          width: 19%;
+        }
+        &.edit {
+        }
+        svg {
+          color: #c7c7c7;
+          transition: color ease 0.2s;
+          padding: 3px;
+          &:nth-last-of-type(1) {
+            margin-left: 9px;
+          }
+          &:hover {
+            cursor: pointer;
+            color: #9b9b9b;
+          }
+        }
+      }
+    }
+    .tr_add {
+      margin-top: 15px;
+    }
+    .tr_edit ~ button {
+      margin-bottom: 15px;
+    }
+    .tr_delete {
+      margin-top: 3px;
+      margin-bottom: 8px;
+      .clear {
+        clear: both;
+      }
+      button {
+        float: right;
+        margin-left: 10px;
+        border: none;
+        background: red;
+        padding: 2px 7px;
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        transition: background-color 0.2s ease;
+        &:hover {
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+          background-color: darken(red, 5%);
+        }
+      }
+      span {
+        float: right;
+        color: red;
+        font-size: 15px;
+        padding-top: 4px;
+      }
+    }
+    input {
+      // width: calc(100% - 50px);
+      width: 60%;
+      padding: 5px;
+      font-size: 18px;
+    }
+  }
+}
